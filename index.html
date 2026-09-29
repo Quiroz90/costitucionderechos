@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Derecho a la Vida - Padlet Interactivo</title>
+    
+    <!-- Fuentes de Google: Playfair Display para elegancia, Inter para legibilidad -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        wine: {
+                            700: '#722F37',
+                            800: '#5c242c',
+                            900: '#451a20',
+                        },
+                        navy: {
+                            800: '#0f172a',
+                            900: '#020617',
+                        },
+                        gold: '#D4AF37'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Fondo elegante */
+        body {
+            background: linear-gradient(135deg, #020617 0%, #451a20 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        /* Estilos del Acordeón con animación suave */
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s ease-out, opacity 0.3s ease-out, padding 0.5s ease;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 2rem;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        
+        .accordion-content.is-open {
+            grid-template-rows: 1fr;
+            opacity: 1;
+            padding: 1.5rem 2rem 2rem 2rem;
+        }
+
+        .accordion-inner {
+            overflow: hidden;
+        }
+
+        /* Rotación del icono */
+        .chevron-icon {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .accordion-button.is-active .chevron-icon {
+            transform: rotate(180deg);
+            color: #722F37; /* Color vino al activar */
+        }
+
+        /* Efecto Glow sutil en la tarjeta principal */
+        .card-glow {
+            box-shadow: 0 20px 40px -5px rgba(0,0,0,0.5), 0 0 20px rgba(114, 47, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <main class="w-full max-w-3xl bg-white rounded-2xl overflow-hidden card-glow">
+        
+        <!-- ENCABEZADO -->
+        <header class="relative bg-navy-900 text-white p-8 sm:p-10 border-b-4 border-wine-700 overflow-hidden">
+            <!-- Patrón de fondo (Icono de balanza de la justicia difuminado) -->
+            <i class="ph ph-scales absolute -right-10 -top-10 text-[15rem] text-white/5 pointer-events-none transform -rotate-12"></i>
+            
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-wine-800/80 border border-wine-700 rounded-full text-gold text-xs font-bold uppercase tracking-widest mb-5">
+                    <i class="ph ph-bookmark-simple-fill"></i>
+                    Aporte para Padlet
+                </div>
+                
+                <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4 text-gray-50">
+                    El Derecho a la Vida y su vulneración: <br>
+                    <span class="text-gold italic">El caso del Feminicidio</span>
+                </h1>
+                
+                <p class="text-slate-300 font-light text-sm sm:text-base flex items-center gap-2">
+                    <i class="ph ph-gavel"></i>
+                    Análisis Constitucional y de Derechos Humanos
+                </p>
+            </div>
+        </header>
+
+        <section class="divide-y divide-gray-200">
+            
+            <!-- ACORDEÓN 1: FUNDAMENTO NORMATIVO -->
+            <div class="accordion-item group">
+                <button class="accordion-button w-full flex items-center justify-between p-6 sm:p-8 bg-white hover:bg-slate-50 transition-colors focus:outline-none" aria-expanded="false">
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full bg-navy-50 flex items-center justify-center text-navy-800 group-hover:scale-110 transition-transform shadow-inner">
+                            <i class="ph-fill ph-scroll text-2xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-serif text-xl sm:text-2xl font-bold text-navy-900">Fundamento Normativo del Derecho a la Vida</h2>
+                            <p class="text-sm text-gray-500 font-medium mt-1">Marco legal nacional e internacional</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0">
+                        <i class="ph-bold ph-caret-down text-2xl text-gray-400 chevron-icon"></i>
+                    </div>
+                </button>
+                
+                <div class="accordion-content border-l-4 border-l-navy-800 ml-4 mb-4 rounded-r-lg">
+                    <div class="accordion-inner text-gray-600 space-y-5">
+                        <p class="text-lg leading-relaxed">
+                            El derecho a la vida es el pilar fundamental de los derechos humanos; sin su respeto, ningún otro derecho tiene sentido. Su sustento legal se divide en dos esferas principales:
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Legislación Nacional -->
+                            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+                                <h3 class="text-wine-800 font-bold mb-3 flex items-center gap-2">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Escudo_nacional_del_Per%C3%BA.svg/200px-Escudo_nacional_del_Per%C3%BA.svg.png" alt="Escudo Perú" class="w-5 h-5 opacity-70 grayscale">
+                                    Legislación Peruana
+                                </h3>
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ph-fill ph-check-circle text-navy-800 mt-1"></i>
+                                        <span><strong>Art. 2, inc. 1 (Constitución):</strong> Toda persona tiene derecho a la vida. Establece además que el concebido es sujeto de derecho en todo cuanto le favorece.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ph-fill ph-check-circle text-navy-800 mt-1"></i>
+                                        <span><strong>Art. 5 (Constitución):</strong> Remarca que el derecho a la vida y a la integridad física son absolutamente <em>irrenunciables</em>.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Marco Internacional -->
+                            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+                                <h3 class="text-navy-800 font-bold mb-3 flex items-center gap-2">
+                                    <i class="ph-fill ph-globe-hemisphere-west text-xl"></i>
+                                    Ordenamiento Supranacional
+                                </h3>
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <i class="ph-fill ph-caret-right text-wine-700 mt-1"></i>
+                                        <span><strong>Declaración Universal DD.HH. (Art. 3):</strong> Todo individuo tiene derecho a la vida, a la libertad y a la seguridad de su persona.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="ph-fill ph-caret-right text-wine-700 mt-1"></i>
+                                        <span><strong>Pacto de San José (Art. 4):</strong> Protege este derecho a partir del momento de la concepción y dicta que nadie puede ser privado de la vida arbitrariamente.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACORDEÓN 2: CASO FEMINICIDIO -->
+            <div class="accordion-item group">
+                <button class="accordion-button w-full flex items-center justify-between p-6 sm:p-8 bg-white hover:bg-slate-50 transition-colors focus:outline-none" aria-expanded="false">
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full bg-wine-50 flex items-center justify-center text-wine-800 group-hover:scale-110 transition-transform shadow-inner">
+                            <i class="ph-fill ph-warning-octagon text-2xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-serif text-xl sm:text-2xl font-bold text-wine-900">Resumen Personal: El Feminicidio</h2>
+                            <p class="text-sm text-gray-500 font-medium mt-1">Análisis de un supuesto violatorio real</p>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex-shrink-0">
+                        <i class="ph-bold ph-caret-down text-2xl text-gray-400 chevron-icon"></i>
+                    </div>
+                </button>
+                
+                <div class="accordion-content border-l-4 border-l-wine-700 ml-4 mb-4 rounded-r-lg">
+                    <div class="accordion-inner text-gray-600 space-y-6">
+                        
+                        <div class="bg-wine-50/50 p-4 rounded-lg border border-wine-100">
+                            <p class="text-wine-900 font-medium">
+                                <i class="ph-fill ph-quotes text-wine-700 mr-1"></i>
+                                El feminicidio es el asesinato de mujeres perpetrado por hombres, motivado única y exclusivamente por discriminación de género. Representa la máxima expresión de violencia y violación a la integridad personal.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-navy-900 font-bold mb-3 flex items-center gap-2">
+                                <i class="ph-fill ph-chart-line-down text-xl text-red-600"></i>
+                                Cifras de Alerta (Septiembre 2025)
+                            </h3>
+                            <p class="mb-2">A pesar de que el Código Penal peruano sanciona los delitos contra la vida, las estadísticas de la <strong>Defensoría del Pueblo</strong> demuestran una realidad desgarradora:</p>
+                            <div class="flex flex-wrap gap-3 mt-3">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-red-100 text-red-800 text-sm font-semibold">
+                                    <i class="ph-fill ph-skull"></i> 6 Feminicidios confirmados
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-orange-100 text-orange-800 text-sm font-semibold">
+                                    <i class="ph-fill ph-magnifying-glass"></i> 258 Mujeres adultas desaparecidas
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-yellow-100 text-yellow-800 text-sm font-semibold">
+                                    <i class="ph-fill ph-child"></i> 475 Niñas/adolescentes desaparecidas
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-200 pt-5 mt-2">
+                            <h3 class="text-navy-900 font-bold mb-2">Reflexión Final</h3>
+                            <p class="leading-relaxed">
+                                Estas cifras no son solo números; evidencian que <strong>el Estado está fallando en su deber de garante protector</strong> de la vida humana. No basta con redactar leyes o endurecer penas (como el debate sobre la ineficaz pena de muerte); se requiere un cambio estructural en la sociedad y en las instituciones de justicia. El derecho a la vida debe dejar de ser una promesa en papel para convertirse en una garantía absoluta para todas las mujeres peruanas.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- Pie de tarjeta simulando formato Padlet -->
+        <footer class="bg-gray-100 p-4 text-center text-xs text-gray-400 font-medium border-t border-gray-200">
+            Aporte generado para el curso de Constitución y Derechos Humanos.
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordions = document.querySelectorAll('.accordion-item');
+
+            // Abrir la primera pestaña automáticamente por defecto para la captura
+            setTimeout(() => {
+                const firstBtn = accordions[0].querySelector('.accordion-button');
+                const firstContent = accordions[0].querySelector('.accordion-content');
+                firstBtn.classList.add('is-active');
+                firstBtn.setAttribute('aria-expanded', 'true');
+                firstContent.classList.add('is-open');
+            }, 300);
+
+            accordions.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = button.classList.contains('is-active');
+
+                    // Comportamiento de "Acordeón exclusivo": cerrar los otros antes de abrir este
+                    accordions.forEach(otherItem => {
+                        const otherBtn = otherItem.querySelector('.accordion-button');
+                        const otherContent = otherItem.querySelector('.accordion-content');
+                        
+                        if (otherBtn !== button) {
+                            otherBtn.classList.remove('is-active');
+                            otherBtn.setAttribute('aria-expanded', 'false');
+                            otherContent.classList.remove('is-open');
+                        }
+                    });
+
+                    // Alternar estado actual
+                    if (!isOpen) {
+                        button.classList.add('is-active');
+                        button.setAttribute('aria-expanded', 'true');
+                        content.classList.add('is-open');
+                    } else {
+                        button.classList.remove('is-active');
+                        button.setAttribute('aria-expanded', 'false');
+                        content.classList.remove('is-open');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
